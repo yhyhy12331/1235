@@ -1,0 +1,49 @@
+{
+  "name": "新笔趣阁-激情小说",
+  "url": "https://www.xbqg77.com/jq",
+  "version": 113,
+  "header": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+    "Referer": "https://www.xbqg77.com/jq/"
+  },
+  "search": {
+    "url": "/search?keyword=${key}",
+    "list": ".card",
+    "name": ".title@text",
+    "author": ".author@text",
+    "cover": ".cover img@src",
+    "detail": "a@href",
+    "summary": ".des@text"
+  },
+  "explore": {
+    "url": "/jq?page=${page}",
+    "list": ".card",
+    "name": ".title@text",
+    "author": ".author@text",
+    "cover": ".cover img@src",
+    "detail": "a@href",
+    "pageSize": 20
+  },
+  "detail": {
+    "summary": "meta[property='og:description']@content",
+    "status": "meta[property='og:novel:status']@content",
+    "category": "meta[property='og:novel:category']@content",
+    "update": "meta[property='og:novel:update_time']@content",
+    "lastChapter": "meta[property='og:novel:latest_chapter_name']@content",
+    "catalog": ".pagination a:contains(开始阅读)@href"
+  },
+  "catalog": {
+    "list": "#list dd",
+    "name": "a@text",
+    "chapter": "a@href",
+    "page": ".pagination a:last@href"
+  },
+  "chapter": {
+    "content": "#content",
+    "purge": [
+      "天才一秒记住.*?最新章节！",
+      "\\s*<p>.*?/p>\\s*",
+      "新笔趣阁无广告.*?xyz"
+    ]
+  }
+}
