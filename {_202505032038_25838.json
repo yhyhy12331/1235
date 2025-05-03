@@ -1,0 +1,35 @@
+{
+  "bookSourceName": "新笔趣阁-激情小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.xinbiquge.com",
+  "enable": true,
+  "ruleSearch": {
+    "bookList": "class.book-list@tag.li",
+    "bookUrl": "tag.a@href",
+    "name": "tag.a@text",
+    "author": "tag.p@text##作者：",
+    "kind": "tag.p@text##分类：",
+    "lastChapter": "tag.p@text##更新："
+  },
+  "ruleBookInfo": {
+    "coverUrl": "id.fmimg@tag.img@src",
+    "intro": "id.intro@text",
+    "updateTime": "tag.p@text##更新时间：",
+    "status": "tag.p@text##状态："
+  },
+  "ruleToc": {
+    "chapterList": "id.list@tag.a",
+    "chapterName": "text",
+    "chapterUrl": "href"
+  },
+  "ruleContent": {
+    "content": "id.content@textNodes"
+  },
+  "header": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+  },
+  "exploreUrl": "/sort/{{key}}/",
+  "searchUrl": "/search.html?q={{key}}",
+  "concurrentRate": "8",
+  "weight": 0
+}
